@@ -1,4 +1,4 @@
-*/ SENSORINO
+/* SENSORINO
    Distance Sensor using regression model
    
    Mattia Dimauro - 2013
