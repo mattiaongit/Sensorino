@@ -1,11 +1,19 @@
+*/ SENSORINO
+   Distance Sensor using regression model
+   
+   Mattia Dimauro - 2013
+*/ 
+
+// Wiring settings, you dont really need to change those
 int inputPIN = A0;                   // Pin LED receiver (Analog 0)
 int emitterPIN = A1;                 // Pin LED emitter  (Analog 1)
+
+// Initial vars, dont really need to change thoose
 double minDistanceIntensity = 0.0;   // Max intensity recorded ( index of min distance pereceived)
 int readings = 2000;                // number of readings ( keep it in a 500/2500 range, greater values suits better in a scotopic condition)
 int filterValue = 0.1;              // const value of filter
 
 double distance = 0.0;
-j
 double reading = 0.0;
 double ambient = 0;
 double intensity = 0;
@@ -16,7 +24,8 @@ double intensity = 0;
 #define sbi(sfr, bit) (_SFR_BYTE(sfr) |= _BV(bit))
 
 
-// REGRESSION VARS
+// REGRESSION VARS - Setup here the number of traing set samples
+
 const int n = 10;         // n# point of regression - Change this value to change the number of examples to record in the training phase
 double intensityData[n];  // Intensity axes (x) values
 double distanceData[n];   // Distance  axes (y) values
@@ -118,9 +127,9 @@ void getDistance() {
   ambient = 0;
   intensity = 0;
   digitalWrite(emitterPIN, LOW);   // Ambient Reading - Emitter pin is OFF (no IR light emitted)
-    for(int i = 0; i < readings; i++) {
+  for(int i = 0; i < readings; i++) {
     ambient = ambient + analogRead(inputPIN);
-    }
+  }
 
 
   digitalWrite(emitterPIN, HIGH);   // Full Reading - Emitter pin is ON (IR light emitted)
@@ -134,10 +143,10 @@ void getDistance() {
   if(ambient < intensity) intensity = intensity/readings - ambient/readings; // Ambient light filter
 
     // If you want to compute distance with the inverse square law, uncomment this and use this funntion to get the distance
-   // return  intensity;
-  //  if(ambient < intensity) intensity = intensity - ambient; // Filtro luce ambientale
-  //    if(intensity > minDistanceIntensity) minDistanceIntensity = intensity; // Salva l'intensità maggiore percepita
-  //    distance = (distance * filterValue) + (sqrt(minDistanceIntensity / intensity) * (1 - filterValue));
+ /* if(ambient < intensity) intensity = intensity - ambient; // Filtro luce ambientale
+    if(intensity > minDistanceIntensity) minDistanceIntensity = intensity; // Salva l'intensità maggiore percepita
+    distance = (distance * filterValue) + (sqrt(minDistanceIntensity / intensity) * (1 - filterValue));
+ */
 }
 
 void loop() {
