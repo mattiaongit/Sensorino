@@ -5,7 +5,7 @@ A distance sensor with Arduino microcontroller.
 This simple sensor can measure the distance from a surface.
 Based on the property of an LED to act as a photodiode, that is, a photodetector able to sense and detect changes in the received light.
 
-All you need is an Arduino board and two IR LED. If you wanna do better, you can use a support for the LEDs to help you to keep them in position and prevent light to disturb the sensor.
+All you need is an Arduino board and two IR LED. You can addtionaly use a support for the LEDs to help you to keep them in position and prevent light to disturb the sensor.
 
 SETUP:
 
