@@ -18,6 +18,7 @@ SETUP:
   Connect the emitter LED negative(-) in the gnd pin (ground)
 
 2) Load the code on the microcontroller
+
    Once the wiring is done, load the program on the microcontroller.
    You can set up the numbers #n of training set samples. Check the code at "REGRESSOR VARS" setting
 
