@@ -7,7 +7,7 @@
 int inputPIN = A0;                   // Pin LED receiver (Analog 0)
 int emitterPIN = A1;                 // Pin LED emitter  (Analog 1)
 
-// Initial vars, dont really need to change thoose
+// Initial vars, dont really need to change those
 double minDistanceIntensity = 0.0;   // Max intensity recorded ( index of min distance pereceived)
 int readings = 2000;                // number of readings ( keep it in a 500/2500 range, greater values suits better in a scotopic condition)
 int filterValue = 0.1;              // const value of filter
