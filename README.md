@@ -1,6 +1,8 @@
 Sensorino
 ==================
 
+http://mattiadmr.com/sensorino/
+
 A distance sensor with Arduino microcontroller.
 This simple sensor can measure the distance from a surface.
 Based on the property of an LED to act as a photodiode, that is, a photodetector able to sense and detect changes in the received light.
