@@ -19,12 +19,14 @@ SETUP:
   Connect the emitter LED positive(+) in the analog 1 pin
   Connect the emitter LED negative(-) in the gnd pin (ground)
 
-2) Load the code on the microcontroller
+2) Loading code on the microcontroller / Setup
 
-   Once the wiring is done, load the program on the microcontroller.
-   You can set up the numbers #n of training set samples. Check the code at "REGRESSOR VARS" setting
+    Once the wiring is done, load the program on the microcontroller.
+    You can set up the numbers of samples for your trainig set. Check the "REGRESSOR VARS" setting
 
-3) Once the program run, it will propt you in the console instruction for the training set.
+3) Training
+
+    Once the program run, instruction will be provided on how to train your predictor.
 
 4) Done! After the training, you can start use your distance sensor.
 
