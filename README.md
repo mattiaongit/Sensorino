@@ -1,7 +1,7 @@
 Sensorino
 ==================
 
-http://www.mattiadmr.me/sensorino/
+http://www.mattiadmr.com/sensorino/
 
 A distance sensor with Arduino microcontroller.
 This simple sensor can measure the distance from a surface.
